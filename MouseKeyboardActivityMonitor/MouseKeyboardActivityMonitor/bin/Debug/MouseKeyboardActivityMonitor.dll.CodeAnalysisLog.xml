@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.dll">
+   <Modules>
+    <Module Name="mousekeyboardactivitymonitor.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="HookNativeMethods" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#CallNextHookEx(System.Int32,System.Int32,System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'idHook' of P/Invoke 'HookNativeMethods.CallNextHookEx(int, int, int, IntPtr)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
+            </Message>
+            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'wParam' of P/Invoke 'HookNativeMethods.CallNextHookEx(int, int, int, IntPtr)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
+            </Message>
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'HookNativeMethods.CallNextHookEx(int, int, int, IntPtr)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetWindowsHookEx(System.Int32,MouseKeyboardActivityMonitor.WinApi.HookCallback,System.IntPtr,System.Int32)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'HookNativeMethods.SetWindowsHookEx(int, HookCallback, IntPtr, int)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="MouseKeyboardActivityMonitor">
+       <Types>
+        <Type Name="KeyEventArgsExt" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FromRawDataGlobal(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyEventArgsExt.cs" Line="98">'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'HotKeySetsListener.ProcessCallback(int, IntPtr)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyEventArgsExt.cs" Line="98">'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'KeyboardHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="KeyPressEventArgsExt" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FromRawDataGlobal(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyPressEventArgsExt.cs" Line="105">'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'KeyboardHookListener.InvokeKeyPress(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyboardHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MouseEventExtArgs" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FromRawDataApp(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="MouseEventExtArgs.cs" Line="35">'MouseEventExtArgs.FromRawDataApp(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataApp(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataApp(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'MouseHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FromRawDataGlobal(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="MouseEventExtArgs.cs" Line="48">'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'MouseHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="MouseKeyboardActivityMonitor.HotKeys">
+       <Types>
+        <Type Name="HotKeySetCollection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'HotKeySetCollection' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'List&lt;HotKeySet&gt;'</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="MouseKeyboardActivityMonitor.WinApi">
+       <Types>
+        <Type Name="KeyboardNativeMethods" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#GetKeyboardLayout(System.Int32)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'KeyboardNativeMethods.GetKeyboardLayout(int)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'uint'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MapVirtualKeyEx(System.Int32,System.Int32,System.UInt32)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'dwhkl' of P/Invoke 'KeyboardNativeMethods.MapVirtualKeyEx(int, int, uint)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'uint'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToUnicodeEx(System.Int32,System.Int32,System.Byte[],System.Text.StringBuilder,System.Int32,System.Int32,System.UInt32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="6" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'dwhkl' of P/Invoke 'KeyboardNativeMethods.ToUnicodeEx(int, int, byte[], StringBuilder, int, int, uint)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'uint'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405">
+   <Name>COM visible type base types should be COM visible</Name>
+   <Description>COM visible types should have an object hierarchy that is uniformly COM visible.</Description>
+   <Resolution Name="Default">{0} is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182202.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122">
+   <Name>Do not indirectly expose methods with link demands</Name>
+   <Description>Do not wrap a method protected by a LinkDemand with a method that does not perform a security check. A LinkDemand checks the permissions of the immediate caller rather than checking the permissions of all callers in the call stack. In this case, the permissions of the wrapper method will be checked. If the wrapper method does not, itself, check the permissions of callers higher in the call stack, malicious code might be able to execute the wrapped function even though it lacks permission to do so.</Description>
+   <Resolution Name="Default">{0} calls into {1} which has a LinkDemand. By making this call, {1} is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: {2}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182303.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="33">CriticalError</MessageLevel>
+   <File Name="securityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901">
+   <Name>P/Invoke declarations should be portable</Name>
+   <Description>.</Description>
+   <Resolution Name="Parameter">As it is declared in your code, parameter {0} of P/Invoke {1} will be {2} bytes wide on {3} platforms. This is not correct, as the actual native declaration of this API indicates it should be {4} bytes wide on {3} platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of {5}.</Resolution>
+   <Resolution Name="Return">As it is declared in your code, the return type of P/Invoke {0} will be {1} bytes wide on {2} platforms. This is not correct, as the actual native declaration of this API indicates it should be {3} bytes wide on {2} platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182284(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="portabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

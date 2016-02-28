@@ -1,0 +1,12 @@
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\bin\Debug\MouseKeyboardActivityMonitor.Demo.exe.config
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\bin\Debug\MouseKeyboardActivityMonitor.Demo.exe
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\bin\Debug\MouseKeyboardActivityMonitor.Demo.pdb
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\bin\Debug\MouseKeyboardActivityMonitor.dll
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\bin\Debug\MouseKeyboardActivityMonitor.pdb
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\bin\Debug\MouseKeyboardActivityMonitor.xml
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\obj\Debug\MouseKeyboardActivityMonitor.Demo.csprojResolveAssemblyReference.cache
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\obj\Debug\MouseKeyboardActivityMonitor.Demo.TestFormHookListeners.resources
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\obj\Debug\MouseKeyboardActivityMonitor.Demo.Properties.Resources.resources
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\obj\Debug\MouseKeyboardActivityMonitor.Demo.csproj.GenerateResource.Cache
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\obj\Debug\MouseKeyboardActivityMonitor.Demo.exe
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor.Demo\obj\Debug\MouseKeyboardActivityMonitor.Demo.pdb

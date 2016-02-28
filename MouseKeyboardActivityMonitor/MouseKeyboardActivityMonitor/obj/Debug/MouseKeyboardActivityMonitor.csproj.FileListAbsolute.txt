@@ -1,0 +1,8 @@
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.dll
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.pdb
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.xml
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.dll.CodeAnalysisLog.xml
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.dll.lastcodeanalysissucceeded
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\obj\Debug\MouseKeyboardActivityMonitor.csprojResolveAssemblyReference.cache
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\obj\Debug\MouseKeyboardActivityMonitor.dll
+C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\obj\Debug\MouseKeyboardActivityMonitor.pdb
