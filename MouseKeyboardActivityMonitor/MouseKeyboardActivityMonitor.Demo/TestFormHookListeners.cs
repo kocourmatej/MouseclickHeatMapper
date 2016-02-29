@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using MouseKeyboardActivityMonitor.WinApi;
+using System.Drawing;
 
 namespace MouseKeyboardActivityMonitor.Demo
 {
@@ -8,6 +9,8 @@ namespace MouseKeyboardActivityMonitor.Demo
     {
         private readonly KeyboardHookListener m_KeyboardHookManager;
         private readonly MouseHookListener m_MouseHookManager;
+
+        Bitmap bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
         public TestFormHookListeners()
         {
@@ -175,6 +178,23 @@ namespace MouseKeyboardActivityMonitor.Demo
         private void HookManager_MouseClick(object sender, MouseEventArgs e)
         {
             Log(string.Format("MouseClick \t\t {0}, {1}\n", e.X, e.Y));
+
+            int red = 20;
+
+            for (int i = e.X; i < e.X + 9; i++)
+            {
+                for (int j = e.Y; j < e.Y + 9; j++)
+                {
+                    try
+                    {
+                        bmp.SetPixel(i, j, Color.FromArgb(255, Color.Firebrick));
+                    }
+                    catch
+                    {
+
+                    }
+                }          
+            }
         }
 
         private void HookManager_MouseUp(object sender, MouseEventArgs e)
@@ -236,6 +256,11 @@ namespace MouseKeyboardActivityMonitor.Demo
             if (e.Button != MouseButtons.Right) { return;}
             Log("Suppressed.\n");
             e.Handled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bmp.Save("mybmp.png");
         }
     }
 }

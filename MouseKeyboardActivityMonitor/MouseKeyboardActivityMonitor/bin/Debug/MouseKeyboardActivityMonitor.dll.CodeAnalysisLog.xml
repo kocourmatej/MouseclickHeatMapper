@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="14.0">
  <Targets>
-  <Target Name="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.dll">
+  <Target Name="C:\Users\Spravce\Desktop\MouseclickHeatMapper\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor\bin\Debug\MouseKeyboardActivityMonitor.dll">
    <Modules>
     <Module Name="mousekeyboardactivitymonitor.dll">
      <Namespaces>
@@ -12,20 +12,20 @@
          <Members>
           <Member Name="#CallNextHookEx(System.Int32,System.Int32,System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message Id="0" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+            <Message Id="0" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
              <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'idHook' of P/Invoke 'HookNativeMethods.CallNextHookEx(int, int, int, IntPtr)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
             </Message>
-            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
              <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'wParam' of P/Invoke 'HookNativeMethods.CallNextHookEx(int, int, int, IntPtr)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
             </Message>
-            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
              <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'HookNativeMethods.CallNextHookEx(int, int, int, IntPtr)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetWindowsHookEx(System.Int32,MouseKeyboardActivityMonitor.WinApi.HookCallback,System.IntPtr,System.Int32)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
              <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'HookNativeMethods.SetWindowsHookEx(int, HookCallback, IntPtr, int)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
             </Message>
            </Messages>
@@ -40,9 +40,9 @@
          <Members>
           <Member Name="#FromRawDataGlobal(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
-             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyEventArgsExt.cs" Line="98">'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'HotKeySetsListener.ProcessCallback(int, IntPtr)'</Issue>
-             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyEventArgsExt.cs" Line="98">'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'KeyboardHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Spravce\Desktop\MouseclickHeatMapper\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyEventArgsExt.cs" Line="98">'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'HotKeySetsListener.ProcessCallback(int, IntPtr)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Spravce\Desktop\MouseclickHeatMapper\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyEventArgsExt.cs" Line="98">'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'KeyboardHookListener.ProcessCallback(int, IntPtr)'</Issue>
             </Message>
            </Messages>
           </Member>
@@ -52,8 +52,8 @@
          <Members>
           <Member Name="#FromRawDataGlobal(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
-             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyPressEventArgsExt.cs" Line="105">'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'KeyboardHookListener.InvokeKeyPress(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyboardHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Spravce\Desktop\MouseclickHeatMapper\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="KeyPressEventArgsExt.cs" Line="105">'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyPressEventArgsExt.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'KeyboardHookListener.InvokeKeyPress(int, IntPtr)'&#xD;&#xA;   -&gt;'KeyboardHookListener.ProcessCallback(int, IntPtr)'</Issue>
             </Message>
            </Messages>
           </Member>
@@ -63,15 +63,15 @@
          <Members>
           <Member Name="#FromRawDataApp(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
-             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="MouseEventExtArgs.cs" Line="35">'MouseEventExtArgs.FromRawDataApp(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataApp(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataApp(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'MouseHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Spravce\Desktop\MouseclickHeatMapper\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="MouseEventExtArgs.cs" Line="35">'MouseEventExtArgs.FromRawDataApp(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataApp(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataApp(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'MouseHookListener.ProcessCallback(int, IntPtr)'</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FromRawDataGlobal(System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
-             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Matěj\Desktop\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="MouseEventExtArgs.cs" Line="48">'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'MouseHookListener.ProcessCallback(int, IntPtr)'</Issue>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\Spravce\Desktop\MouseclickHeatMapper\MouseKeyboardActivityMonitor\MouseKeyboardActivityMonitor" File="MouseEventExtArgs.cs" Line="48">'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)' calls into 'Marshal.PtrToStructure(IntPtr, Type)' which has a LinkDemand. By making this call, 'Marshal.PtrToStructure(IntPtr, Type)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawDataGlobal(int, IntPtr)'&#xD;&#xA;   -&gt;'MouseEventExtArgs.FromRawData(int, IntPtr, bool)'&#xD;&#xA;   -&gt;'MouseHookListener.ProcessCallback(int, IntPtr)'</Issue>
             </Message>
            </Messages>
           </Member>
@@ -83,7 +83,7 @@
        <Types>
         <Type Name="HotKeySetCollection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="DependsOnFix">
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="DependsOnFix">
            <Issue Certainty="90" Level="Error">'HotKeySetCollection' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'List&lt;HotKeySet&gt;'</Issue>
           </Message>
          </Messages>
@@ -96,21 +96,21 @@
          <Members>
           <Member Name="#GetKeyboardLayout(System.Int32)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
              <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'KeyboardNativeMethods.GetKeyboardLayout(int)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'uint'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MapVirtualKeyEx(System.Int32,System.Int32,System.UInt32)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
              <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'dwhkl' of P/Invoke 'KeyboardNativeMethods.MapVirtualKeyEx(int, int, uint)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'uint'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToUnicodeEx(System.Int32,System.Int32,System.Byte[],System.Text.StringBuilder,System.Int32,System.Int32,System.UInt32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="6" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-28 18:57:37Z" FixCategory="NonBreaking">
+            <Message Id="6" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2016-02-29 05:24:59Z" FixCategory="NonBreaking">
              <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'dwhkl' of P/Invoke 'KeyboardNativeMethods.ToUnicodeEx(int, int, byte[], StringBuilder, int, int, uint)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'uint'.</Issue>
             </Message>
            </Messages>
